@@ -37,10 +37,11 @@ A RESTful API for managing user portfolios, including projects, skills, educatio
    ```properties
    spring.datasource.url=jdbc:mysql://localhost:3306/portfolio_db
    spring.datasource.username=root
-   spring.datasource.password=yourpassword
-   spring.jpa.hibernate.ddl-auto=update
+   spring.datasource.password=******
+   spring.jpa.hibernate.ddl-auto=create-drop
 
-   jwt.secret=your-secret-key
+   jwt.secret=df5992ae9b4354ecac2b2f2397382b9adeb1475d9619e0f25c56096b55651e55f7946758b3f6fbb784518fcc6d1a633fa40c80e714075ec4ab5c7cb0e9305cfd21ededcc9d50e628b03e05cdda783f503473795e750712b9622091b2ebab813f01e79014f64324ee5d94ca602f74807ea7e25b8c359dcbb5c1d73cd93850ce41cef70ffb7acff3fa78169ead15a5b695dff9a7523a6c94a8259fa4e35b135fadf45e8b15eac0536f7450d33d942726af1109bf56f9a17ecb98d6bacf643405bba9a83f65209ba4dd444092a8cf51aebf7d561c7c213ef4be7acd515da2cc1f237a6684bc9ff248a5de6ac07f22312b64a0fbe98dc9d4a024de36076db6ba7188
+
    ```
 3. Build and run the application:
    ```sh
