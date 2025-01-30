@@ -1,0 +1,98 @@
+# Portfolio API
+
+A RESTful API for managing user portfolios, including projects, skills, education, and experiences. Built with **Spring Boot**, **Spring Security**, **JWT Authentication**, and **MySQL**.
+
+## Features
+- **Authentication**: User login and registration with JWT-based security.
+- **User Management**: Retrieve, update, and delete user profiles.
+- **Portfolio Management**:
+  - **Projects**: Create, read, update, and delete projects.
+  - **Skills**: Manage user skills.
+  - **Education**: Track educational background.
+  - **Experiences**: Store professional experiences.
+- **Security**: Endpoints are protected with JWT authentication.
+- **Lombok**: Used to reduce boilerplate code.
+
+## Technologies Used
+- Java 17
+- Spring Boot 3
+- Spring Security (JWT Authentication)
+- Hibernate & JPA
+- MySQL
+- Lombok
+
+## Installation & Setup
+### Prerequisites
+- Java 17+
+- MySQL database setup
+- Maven installed
+
+### Configuration
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/portfolio-api.git
+   cd portfolio-api
+   ```
+2. Configure **application.properties**:
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/portfolio_db
+   spring.datasource.username=root
+   spring.datasource.password=yourpassword
+   spring.jpa.hibernate.ddl-auto=update
+
+   jwt.secret=your-secret-key
+   ```
+3. Build and run the application:
+   ```sh
+   mvn spring-boot:run
+   ```
+
+## API Endpoints
+
+### Authentication
+- **POST /api/auth/register** – Register a new user and recieve a JWT token
+- **POST /api/auth/login** – Authenticate and receive a JWT token
+
+### Users
+- **GET /api/users/{id}** – Retrieve user details
+- **PUT /api/users/{id}** – Update user details
+- **DELETE /api/users/{id}** – Delete user account
+
+### Projects
+- **POST /api/projects** – Create a new project
+- **GET /api/projects** – Get all projects
+- **GET /api/projects/{id}** – Get project by ID
+- **PUT /api/projects/{id}** – Update project details
+- **DELETE /api/projects/{id}** – Delete project
+
+### Skills
+- **POST /api/skills** – Add a new skill
+- **GET /api/skills** – Retrieve all skills
+- **GET /api/skills/{id}** – Get skill by ID
+- **PUT /api/skills/{id}** – Update skill
+- **DELETE /api/skills/{id}** – Remove skill
+
+### Education
+- **POST /api/educations** – Add education record
+- **GET /api/educations** – Get all education records
+- **GET /api/educations/{id}** – Get education by ID
+- **PUT /api/educations/{id}** – Update education record
+- **DELETE /api/educations/{id}** – Delete education record
+
+### Experiences
+- **POST /api/experiences** – Add experience
+- **GET /api/experiences** – Retrieve all experiences
+- **GET /api/experiences/{id}** – Get experience by ID
+- **PUT /api/experiences/{id}** – Update experience
+- **DELETE /api/experiences/{id}** – Delete experience
+
+## Authentication & Security
+- JWT authentication is required for accessing user and portfolio management endpoints.
+- Include `Authorization: Bearer <token>` in headers for authenticated requests.
+
+## Contributing
+Feel free to fork this project and submit pull requests. Contributions are welcome!
+
+## License
+MIT License
+
